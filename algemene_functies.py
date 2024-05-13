@@ -16,20 +16,18 @@ else:
     print(f"Het getal {cijfer_1} komt niet voor in de lijst")
 
 
-a = 12
-b = 3
 
-def bereken_functie_2():
-    global a
-    global b
-    resultaat1 = a + b
-    resultaat2 = a - b
-    resultaat3 = a * b
-    resultaat4 = int(a / b)
 
-    return [resultaat1, resultaat2, resultaat3, resultaat4]
+def bereken_functie_2(a,b):
+    uitvoerlijstfunctie_2 = []
+    uitvoerlijstfunctie_2.append(a + b)
+    uitvoerlijstfunctie_2.append(a - b)
+    uitvoerlijstfunctie_2.append(a * b)
+    uitvoerlijstfunctie_2.append(a / b)
 
-print(bereken_functie_2())
+    return uitvoerlijstfunctie_2
+
+print(bereken_functie_2(12, 3))
 
 def mijn_functie_2(cijfer1, cijfer2):
     mapping = {

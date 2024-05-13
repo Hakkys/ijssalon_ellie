@@ -1,50 +1,11 @@
 from algemene_functies import mijn_functie_2
 
-smaak = "aardbei"
-prijs = 4
-korting = 0.1
+def aanbieding_1(smaak, prijs, korting):
+        prijs_na_korting = prijs * (1 - korting) 
+        uitvoer_aanbieding_1 = f'''Vandaag in de aanbieding: Emmertje ijs (1 liter) in de smaak {smaak}, van {prijs} euro voor {prijs_na_korting} euro.'''
+        return uitvoer_aanbieding_1
 
-def aanbieding_1():
-    global smaak
-    global prijs
-    global korting
-    korting_bedrag = prijs * korting
-    prijs_na_korting = prijs - korting_bedrag
-
-    return f"Vandaag in de aanbieding: emmertje ijs (1 liter) in de smaak {smaak}, van {prijs:.2f} euro voor {prijs_na_korting:.2f} euro."
-
-print(aanbieding_1())
-
-
-"""
-maandag = 220
-dinsdag = 430
-woensdag = 125
-donderdag = 160
-vrijdag = 205
-zaterdag = 90
-zondag = 345
-btw9 = 0.09
-
-def inkomsten_totaal():
-    global maandag
-    global dinsdag
-    global woensdag
-    global donderdag
-    global vrijdag
-    global zaterdag
-    global zondag
-    global btw9
-    inkomstenvdweek = maandag + dinsdag + woensdag + donderdag + vrijdag + zaterdag + zondag
-
-    return inkomstenvdweek
-
-totaal_inkomsten = inkomsten_totaal()
-btw9_overinkomsten = btw9 * totaal_inkomsten
-#print(f"Het totaal van de inkomsten deze week is €{totaal_inkomsten:.2f} euro")
-print(f"Het totaal van de inkomsten deze week is €{totaal_inkomsten:.2f} euro, waarover €{btw9_overinkomsten} euro BTW betaald dient te worden") 
-"""
-
+print(aanbieding_1("Aardbei", 4, 0.1))
 
 def inkomsten_totaal(inkomsten, btw9):
     totaal_inkomsten = sum(inkomsten)
